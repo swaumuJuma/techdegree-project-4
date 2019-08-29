@@ -26,7 +26,7 @@
         return this.phrase.indexOf(letter) > -1;   // true or false
     }
 
-    showMatchedLetter(letter) {        // Displays all matched letters
+    showMatchedLetter(letter) {       // Displays all matched letters
         let matchedLetters = [];
         matchedLetters = document.querySelectorAll(`.${letter}`);
 
