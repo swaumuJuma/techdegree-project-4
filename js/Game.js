@@ -22,7 +22,7 @@ class Game {
         this.activePhrase.addPhraseToDisplay();                         // Display random phrase to screen
     }
 
-    getRandomPhrase() {          // Selects and return a random phrase from this.phrases
+    getRandomPhrase() {         // Selects and return a random phrase from this.phrases
         return this.phrases[Math.floor(Math.random() * this.phrases.length)];
     }
 
@@ -47,11 +47,11 @@ class Game {
         let images = [];
         images = document.querySelectorAll('img');
         images[this.missed].classList.add("animated", "jello");    // EXTRA CREDIT: Add animation to removed heart
-        images[this.missed].src = 'images/lostHeart.png';   
-        this.missed += 1;                                       // Replace blue hearts with gray hearts when missed    
+        images[this.missed].src = 'images/lostHeart.png';
+        this.missed += 1;                                       // Replace blue hearts with gray hearts when missed
         if(this.missed === 5) {                                 // If missed five times, game is over and special efects removed
-            this.gameOver();   
-        } 
+            this.gameOver();
+        }
     }
 
     checkForWin() {                         // Checks to see if all letters in phrase have been found
@@ -66,16 +66,16 @@ class Game {
         const overlay = document.querySelector('#overlay');
         overlay.style.display = '';                              //  Show overlay, hide game board
         let gameOverMsg = document.querySelector('#game-over-message');
-        if(this.checkForWin() === true) {  
+        if(this.checkForWin() === true) {
             gameOverMsg.classList.add("animated", "flash");                // If game is won, display winning message
             gameOverMsg.textContent = 'Victory is yours!';
             overlay.classList.remove('lose');
             overlay.classList.add('win');
-        } else {      
+        } else {
             gameOverMsg.classList.add("animated", "pulse");                      // If game is lost, display losing message
-            gameOverMsg.innerHTML = "Sorry! Correct answer is:" + 
+            gameOverMsg.innerHTML = "Sorry! Correct answer is:" +
                 `<p>${this.activePhrase.phrase.charAt(0).toUpperCase() +        // EXTRA CREDIT: Display correct phrase
-                    this.activePhrase.phrase.slice(1)}</p>`;        
+                    this.activePhrase.phrase.slice(1)}</p>`;
             overlay.classList.remove('win');
             overlay.classList.add('lose');
         }
@@ -94,7 +94,7 @@ class Game {
         keys = document.querySelectorAll('.key');
         keys.forEach(key => {                               // Enable all keys
             key.removeAttribute("disabled");
-            key.classList.remove("animated", "rotateIn", 'shake'); 
+            key.classList.remove("animated", "rotateIn", 'shake');
             key.className = "key";
         });
 
@@ -103,7 +103,7 @@ class Game {
         image.forEach(img => {
             img.src= 'images/liveHeart.png';                   // Restore hearts
             img.classList.remove("animated", "jello");         // Remove animation class from hearts
-        });   
+        });
 
         this.activePhrase = null;                               // Remove previous phrase
     }
