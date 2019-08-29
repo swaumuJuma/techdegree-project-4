@@ -1,4 +1,4 @@
-<div id="phrase" class="section">
+<div id = "phrase" class = "section">
     <ul>
         <li class="hide letter h">h</li>
         <li class="hide letter o">o</li>
