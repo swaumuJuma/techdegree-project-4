@@ -15,7 +15,7 @@
 
    * Using classes from the animate.css file provided, added animation to:
 
-     _ phrase placeholders (phrase.js);
-     _ correct key pressed (game.js);
-     _ wrong key pressed (game.js);
-    _ removed heart (game.js);
+     - phrase placeholders*(phrase.js);*
+     - correct key pressed *(game.js);*
+     - wrong key pressed *(game.js);*
+     - removed heart *(game.js);*
