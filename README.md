@@ -1,5 +1,5 @@
 # techdegree-project-4
- ## *OOP Game Show App*
+ ## _OOP Game Show App_
 
  ### Phrase Hunter:
 
